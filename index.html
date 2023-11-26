@@ -250,15 +250,16 @@ video {
         <div id="notification-container">
         <span id="notification-message">Press F11 for better result</span>
     </div>
-        <script>
+    <script>
         document.addEventListener('DOMContentLoaded', function () {
-            
-            document.getElementById('notification-container').style.display = 'block';
-        });
+            // Show the notification
+            var notificationContainer = document.getElementById('notification-container');
+            notificationContainer.style.display = 'block';
 
-        
-        document.getElementById('notification-container').addEventListener('click', function () {
-            this.style.display = 'none';
+            // Hide the notification after 5 seconds
+            setTimeout(function () {
+                notificationContainer.style.display = 'none';
+            }, 5000);
         });
     </script>
     
