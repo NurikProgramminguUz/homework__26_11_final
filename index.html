@@ -13,10 +13,23 @@
             font-size: 60px;
             font-family: 'Press Start 2P', cursive;
         }
-
+                #notification-container {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: #f8d7da; 
+            padding: 10px;
+            text-align: center;
+            color: #721c24; 
+            font-size: 16px;
+            font-weight: bold;
+            z-index: 1000;
+        }
         .source_up p {
             font-size: 30px;
-            font-family: 'Kdam Thmor Pro', sans-serif; /* Added a fallback font */
+            font-family: 'Kdam Thmor Pro', sans-serif; 
         }
         #timer {
             width: 300px;
@@ -234,7 +247,21 @@ video {
 
 
 <body>
-    <!-- Your content goes here -->
+        <div id="notification-container">
+        <span id="notification-message">Press F11 for better result</span>
+    </div>
+        <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            
+            document.getElementById('notification-container').style.display = 'block';
+        });
+
+        
+        document.getElementById('notification-container').addEventListener('click', function () {
+            this.style.display = 'none';
+        });
+    </script>
+    
     <div class="mainofthem">
         <div class="upper">
             <div class="vid">
@@ -260,7 +287,7 @@ video {
                     Take this matter seriously and act promptly to secure your data and avoid the severe consequences outlined above.</p>
                 <div id="timer"></div>
 
-                <!-- your other body content here -->
+                
             
                 <script>
                         
