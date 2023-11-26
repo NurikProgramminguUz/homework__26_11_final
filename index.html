@@ -16,14 +16,19 @@
                 #notification-container {
             display: none;
             position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            background-color: #f8d7da; 
+            /* top: 50%; */
+            left: 35%;
+            width: 400px;
+            height: 40px;
+            background-color: #bfc2bf8d; 
             padding: 10px;
             text-align: center;
-            color: #721c24; 
-            font-size: 16px;
+            border-style: solid;
+            border-radius: 5px;
+            border-color: rgb(0, 0, 0);
+            color: rgb(0, 0, 0); 
+            font-size: 26px;
+            font-family: 'Black Ops One';
             font-weight: bold;
             z-index: 1000;
         }
@@ -259,7 +264,7 @@ video {
             // Hide the notification after 5 seconds
             setTimeout(function () {
                 notificationContainer.style.display = 'none';
-            }, 5000);
+            }, 3000);
         });
     </script>
     
